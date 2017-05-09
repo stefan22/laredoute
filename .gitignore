@@ -1,0 +1,27 @@
+
+## Files to ignore ¯¯¯¯ ‰„¯˘˘˘˘˘
+
+# Untracked files:
+[...]
+assets/*.*
+# JS files
+js/og.js
+
+# src/internal.o
+[...]
+$ cat .git/info/exclude
+
+# ignore objects and archives, anywhere in the tree.
+*.[oa]
+$ cat Documentation/.gitignore
+
+$ git status
+[...]
+# Untracked files:
+[...]
+
+# DS_Store
+DS_Store/
+
+
+¯¯¯¯ ‰„¯˘˘˘˘˘  :100:
