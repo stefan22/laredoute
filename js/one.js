@@ -1,7 +1,7 @@
-(function(andRedEyelikeQuidco, undefined) {
+(function(andRedEyelikeLaRedoute, undefined) {
     var $ = window.jQuery;
     var SL = {};
-    SL.andRedEyelikeQuidco = {
+    SL.andRedEyelikeLaRedoute = {
         init: function() {
             this.pgCssDesktop();
             this.pgCssMobile();
@@ -131,7 +131,7 @@
 
     
 
-        SL.andRedEyelikeQuidco.init();
+        SL.andRedEyelikeLaRedoute.init();
         
 
 
@@ -141,4 +141,4 @@
 })();
 
 
-}.call(window.andRedEyelikeQuidco || {}));
+}.call(window.andRedEyelikeLaRedoute || {}));
