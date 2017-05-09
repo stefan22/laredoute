@@ -13,3 +13,4 @@
  - same functionality across filters
  - add  'apply' CTA to drop down
  - Also => when users has applied filters display selected sizes below banner.
+ - red banner background => #de343d
