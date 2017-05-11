@@ -1,4 +1,4 @@
-# laredoute
+# laredoute :boom:
 
 ## Variation 1 => Shop by Size Banner
 ## Variation 2 => Shop by Size Banner & Sale & Clearance
