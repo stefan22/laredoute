@@ -1,4 +1,7 @@
-# laredoute
+# laredoute :boom:
+
+## Variation 1 => Shop by Size Banner
+## Variation 2 => Shop by Size Banner & Sale & Clearance
 
  ### notes 
  - font-family: Arial,Helvetica,sans-serif;
@@ -14,3 +17,23 @@
  - add  'apply' CTA to drop down
  - Also => when users has applied filters display selected sizes below banner.
  - red banner background => #de343d
+ - banner original size => 780x184px
+ - right banner 535x184px
+ - left banner 245x184
+
+ ### changes
+
+ - new image tag (left) 70% off
+ - new div with clearance sale text on alpha channel
+ 		- change background color with css with (redbanner) id or class
+ 		- change position of left and right banner using float
+
+70off left image
+cdn.optimizely.com/img/153957092/4ef1416349bd4199a5aa77bc05c4519b.png
+
+black arrow
+cdn.optimizely.com/img/153957092/95eb734984f14993b47056907404491f.png
+
+clearance sale
+cdn.optimizely.com/img/153957092/77813668e6e943f78926b5a0af7ad6f3.png
+
