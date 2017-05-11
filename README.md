@@ -21,6 +21,13 @@
  - right banner 535x184px
  - left banner 245x184
 
+ ### changes
+
+ - new image tag (left) 70% off
+ - new div with clearance sale text on alpha channel
+ 		- change background color with css with (redbanner) id or class
+ 		- change position of left and right banner using float
+
 70off left image
 cdn.optimizely.com/img/153957092/4ef1416349bd4199a5aa77bc05c4519b.png
 
