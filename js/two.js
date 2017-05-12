@@ -108,14 +108,35 @@
             ele.innerHTML = ' <div id="tsize" class="facet divDrop facet-size" tabindex="-1" data-stayshown="" data-type="size" data-cerberus="dropdown_plpProduit_sizeFilter" style=""><dl id="bansizes"><dt>Sizes</dt></dl></div>  ';
 
          var media = document.getElementById('leban');
-         media.appendChild(ele);
-         media.appendChild(shopby);
+         // media.appendChild(ele);
+         // media.appendChild(shopby);
+
+         //clonismaximus
+         var c = document.querySelectorAll('.facet.divDrop.facet-size')[0];
+         c.id = 'tsize';
+         var d = c.cloneNode(true);
+         d.id = 'bansize';
+         //append
+         media.appendChild(d);
+         //fixes: 
+         //rename mCSB_1 to mCSB_01
+         var c = document.
+         querySelectorAll('.mCustomScrollBox.mCS-dark.mCSB_vertical.mCSB_inside')[0];
+         c.id = "mCSB01";
+
+
+
+
+
+
+
 
 
         },//sizeInc
 
         openit: function() {
             console.info('%c openit \u221a', 'background:blue;color:white;');
+
             var bsize = document.getElementById('bansizes');
             var bsiz = document.getElementById('bansize');
             bsiz.addEventListener('click', function(e) {
@@ -157,6 +178,10 @@
 
 
             }); //click
+
+            
+
+            
 
         }//openit
     };
