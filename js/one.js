@@ -14,7 +14,7 @@
         }, //init
         pgCssDesktop: function() {
             console.info('%c pgCssDesktop \u221a', 'background:blue;color:white;');
-            var mainCss = '.plpFRv2-divMain .right {margin-top:0 !important; }.panel {position:relative;} #redbanner {background:#de343d; z-index;15; float:right; position:relative;} #leban {max-width:780px;overflow:auto;padding:0 0 20px 0; position:relative;} .leftban {float:left;} .mediabank {overflow:auto; } #leftbanid {} #bansize {position:absolute; right:190px; top:130px; width:150px; height:38px; z-index100; background:#fff;} img#leftbanid {max-width:245px; height:auto;} ';
+            var mainCss = '.plpFRv2-divMain .right {margin-top:0 !important; }.panel {position:relative;} #redbanner {background:#de343d; z-index;15; float:right; position:relative; max-width:535px;} #leban {max-width:780px;overflow:auto;padding:0 0 20px 0; position:relative;} .leftban {float:left;} .mediabank {overflow:auto; } #leftbanid {} #bansize {position:absolute; right:190px; top:130px; width:150px; height:38px; z-index100; background:#fff;} img#leftbanid {max-width:245px; height:auto;} ';
             var head = document.getElementsByTagName('head')[0];
 
             function addcss(css) {
@@ -99,7 +99,7 @@
             var ele = document.createElement('div');
             ele.className = "sizeinc";
             ele.id = 'bansize';
-            ele.innerHTML = ' <div id="tsize" class="facet divDrop facet-size" tabindex="-1" data-stayshown="" data-type="size" data-cerberus="dropdown_plpProduit_sizeFilter"><dl id="bansizes"><dt>Sizes</dt></dl></div>  ';
+            ele.innerHTML = ' <div id="tsize" class="facet divDrop facet-size" tabindex="-1" data-stayshown="" data-type="size" data-cerberus="dropdown_plpProduit_sizeFilter" style=""><dl id="bansizes"><dt>Sizes</dt></dl></div>  ';
 
          var media = document.getElementById('leban');
          media.appendChild(ele);
@@ -116,9 +116,27 @@
                     console.log('sized');
                     var tsize = document.getElementById('tsize');
                     tsize.className += " shown";
+                    var drop = document.querySelectorAll('.divDropInner')[0];
+                    drop.style.opacity = 1;
+                    drop.style.display = "block";
+                    var panel = document.querySelectorAll('.divDropInner')[0];
+                    panel.style.position = "absolute";
+                    panel.style.top = " -85px";
+                    panel.style.left = "430px";
+                    
+                    
                 } else if ((e.target.id == "bansizes") && (document.getElementById('tsize').classList.contains('shown'))) {
                     document.getElementById('tsize').
                     className = "facet divDrop facet-size";
+                    var drop = document.querySelectorAll('.divDropInner')[0];
+                    drop.style.opacity = 0;
+                    drop.style.display = "none";
+                    var panel = document.querySelectorAll('.divDropInner')[0];
+                    panel.style.position = "absolute";
+                    panel.style.top = "0";
+                    panel.style.left = "0";
+                   
+
                 }
                 
 
