@@ -184,7 +184,24 @@
 
             
 
-        }//openit
+        },//openit
+
+        othercode: function() {
+
+              
+                    window.on("click", ".accordian", function() {
+                        i.hasClass("collapsed") ? i.removeClass("collapsed").addClass("expanded") : i.removeClass("expanded").addClass("collapsed")
+                    });
+
+                  
+                    
+
+                
+
+            
+
+
+        }//other
     };
 
 (function() {
