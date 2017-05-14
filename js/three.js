@@ -10,7 +10,7 @@
             this.bannerLeft();
             this.sizeInc();
             this.openit();
-           
+            this.otherSquares();        
 
         }, //init
         pgCssDesktop: function() {
@@ -128,16 +128,17 @@
                         rot.style.position = "absolute";
                         rot.style.right = "190px";
                         rot.style.top = "-119px";
-                        rot.style.zIndex = 1000;
+                        
                         //timezone   
                         function timezone() {
                             //og
-                            rot.classList.remove('.reset-facet');     
+                            //rot.classList.remove('.reset-facet');     
                             rot.className += " shown";
-                            //ban one
-                            document.getElementById('bansize').style.zIndex = -5;
+                            rot.style.zIndex = 10;
                             //size one
                             document.getElementById('sizedos').style.zIndex = 10;
+                            //ban one
+                            document.getElementById('bansize').style.zIndex = -5;
                             //brand
                             bran.style.marginLeft = "162px";
                             //csbone
@@ -146,7 +147,7 @@
                             drop.style.opacity = 1;
                             drop.style.display = "block";
                         }
-                        setTimeout(timezone,150);                         
+                        setTimeout(timezone,100);                         
                      
                     } //if
                     
@@ -162,35 +163,41 @@
                         rot.style.position = "";
                         rot.style.right = "";
                         rot.style.top = "";
-                        rot.style.zIndex = 100;
+                        //brand
+                        
+                        
                         //timezone   
                         function timezone() {
                             //og
-                            rot.classList.remove('.reset-facet');     
+                            //rot.classList.remove('.reset-facet');  
+                            bran.style.marginLeft = "7px";
+                            rot.style.zIndex = 10;   
                             rot.className += " shown";
                             //size one
                             document.getElementById('sizedos').style.zIndex = -5;
                             //ban one
                             document.getElementById('bansize').style.zIndex = 10;
-                            //brand
-                            bran.style.marginLeft = "7px";
+                            
                             //csbone
                             document.getElementById('mCSB_1').style.maxHeight = "147px";
                             //inner
                             drop.style.opacity = 1;
                             drop.style.display = "block";
                         }
-                        setTimeout(timezone,150);       
-
-
-
-
+                        setTimeout(timezone,100);       
 
                     } //if
 
                 }); //sizdos
 
-            }, //openit
+            },//openit
+
+            otherSquares: function() {
+                console.info('%c otherSquares \u221a', 'background:blue;color:white;');
+                
+
+
+            }//otherSquares
 
             
     };
