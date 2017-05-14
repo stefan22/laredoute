@@ -14,7 +14,7 @@
         }, //init
         pgCssDesktop: function() {
             console.info('%c pgCssDesktop \u221a', 'background:blue;color:white;');
-            var mainCss = '.plpFRv2-divMain .right {margin-top:0 !important; }.panel {position:relative;} #redbanner {background:#de343d; z-index:0; float:right; } #leban {max-width:780px;overflow:hidden; padding:0 0 20px 0; position:relative;} .leftban {float:left;} .mediabank {overflow:auto; } #leftbanid {} #bansize {position:absolute; right:190px; top:130px; width:142px; height:39px; z-index:10; background:#fff;} img#leftbanid {max-width:245px; height:auto;} #shopby {position:absolute; top:109px; right:114px; font-size:16px; letter-spacing:.75px; color:#fafafa; font-weight:normal; line-height:1;} #elefak {position:relative;} #sizedos {position:absolute; left:9px; top:58px; width:142px; height:39px; z-index:-2;} dl {font-size:12px; line-height:38px;}  ';
+            var mainCss = '.plpFRv2-divMain .right {margin-top:0 !important; }.panel {position:relative;} #redbanner {background:#de343d; z-index:0; float:right; } #leban {max-width:780px;overflow:hidden; padding:0 0 20px 0; position:relative;} .leftban {float:left;} .mediabank {overflow:auto; } #leftbanid {} #bansize {position:absolute; right:196px; top:128px; width:141px; height:39px; z-index:10; background:#fff;} img#leftbanid {max-width:245px; height:auto;} #shopby {position:absolute; top:109px; right:114px; font-size:16px; letter-spacing:.75px; color:#fafafa; font-weight:normal; line-height:1;} #elefak {position:relative;} #sizedos {position:absolute; left:10px; top:58px; width:141px; height:39px; z-index:-2;} dl {font-size:12px; line-height:38px;} .divDrop>span,.divDropEmpty>span,.divDrop>dl {line-height:37px;} #tsize>dl>dt {line-height:38px;} ';
             var head = document.getElementsByTagName('head')[0];
 
             function addcss(css) {
@@ -122,14 +122,14 @@
                         //og            
                         rot.style.position = "absolute";
                         rot.style.right = "190px";
-                        rot.style.top = "-120px";
+                        rot.style.top = "-119px";
                         rot.style.zIndex = 100;
                         //ban one
                         document.getElementById('bansize').style.zIndex = -5;
                         //size one
                         document.getElementById('sizedos').style.zIndex = 10;
                         //brand
-                        bran.style.marginLeft = "160px";
+                        bran.style.marginLeft = "162px";
                     } //if
                 }); //bsiz    
                 //targeted event
@@ -137,7 +137,7 @@
                     e.preventDefault();
                     if (e.toElement.nodeName == "DL" || e.toElement.nodeName == "DT") {
                         //brand
-                        bran.style.marginLeft = 0;
+                        bran.style.marginLeft = "7px";
                         //og
                         rot.style.position = "";
                         rot.style.right = "";
