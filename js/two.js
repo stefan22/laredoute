@@ -15,7 +15,7 @@
         }, //init
         pgCssDesktop: function() {
             console.info('%c pgCssDesktop \u221a', 'background:blue;color:white;');
-            var mainCss = '.plpFRv2-divMain .right {margin-top:0 !important; }.panel {position:relative;} #redbanner {background:#de343d; z-index;15; float:right; position:relative; max-width:535px;} #leban {max-width:780px;overflow:auto;padding:0 0 20px 0; position:relative;} .leftban {float:left;} .mediabank {overflow:auto; } #leftbanid {} #bansize {position:absolute; right:190px; top:130px; width:150px; height:39px; z-index100; background:#fff;} img#leftbanid {max-width:245px; height:auto;} #shopby {position:absolute; top:109px; right:114px; font-size:16px; letter-spacing:.75px; color:#fafafa; font-weight:normal; line-height:1;} ';
+            var mainCss = '.plpFRv2-divMain .right {margin-top:0 !important; }.panel {position:relative;} #redbanner {background:#de343d; z-index:0; float:right; } #leban {max-width:780px;overflow:hidden; padding:0 0 20px 0; position:relative;} .leftban {float:left;} .mediabank {overflow:auto; } #leftbanid {} #bansize {position:absolute; right:190px; top:130px; width:150px; height:39px; z-index100; background:#fff;} img#leftbanid {max-width:245px; height:auto;} #shopby {position:absolute; top:109px; right:114px; font-size:16px; letter-spacing:.75px; color:#fafafa; font-weight:normal; line-height:1;}  ';
             var head = document.getElementsByTagName('head')[0];
 
             function addcss(css) {
@@ -105,75 +105,76 @@
 
 
             ele.id = 'bansize';
-            ele.innerHTML = ' <div id="tsize" class="facet divDrop facet-size" tabindex="-1" data-stayshown="" data-type="size" data-cerberus="dropdown_plpProduit_sizeFilter" style=""><dl id="bansizes"><dt>Sizes</dt></dl></div>  ';
+            ele.innerHTML = ' <div id="tsize" class="facet divDrop facet-size" tabindex="-1" data-stayshown="" data-type="size" data-cerberus="dropdown_plpProduit_sizeFilter"> <dl> <dt>Sizes</dt> </dl> <div class="divDropInner" style="opacity: 0; display: none;"> </div></div>   ';
 
-         var media = document.getElementById('leban');
-         // media.appendChild(ele);
-         // media.appendChild(shopby);
+            var media = document.getElementById('leban');
+            media.appendChild(ele);
+            //children
+            var xx = document.querySelectorAll('.divDropInner')[1];
+            var one = xx.children[0].cloneNode(true);
+            var two = xx.children[1].cloneNode(true);
+            var fa = document.getElementById('mCSB_1').style.maxHeight = "147px";
+            var xz = document.querySelectorAll('.divDropInner')[0];
+            xz.appendChild(one);
+            xz.appendChild(two);
+            
+            
+            
 
-         //clonismaximus
-         var c = document.querySelectorAll('.facet.divDrop.facet-size')[0];
-         c.id = 'tsize';
-         var d = c.cloneNode(true);
-         d.id = 'bansize';
-         //append
-         media.appendChild(d);
-         //fixes: 
-         //rename mCSB_1 to mCSB_01
-         var c = document.
-         querySelectorAll('.mCustomScrollBox.mCS-dark.mCSB_vertical.mCSB_inside')[0];
-         c.id = "mCSB01";
-
-
-
-
-
-
-
-
+    
 
         },//sizeInc
 
         openit: function() {
             console.info('%c openit \u221a', 'background:blue;color:white;');
 
-            var bsize = document.getElementById('bansizes');
+            //targeted event
             var bsiz = document.getElementById('bansize');
             bsiz.addEventListener('click', function(e) {
-                console.log(e);
-                //debugger;
-                if((e.target.innerHTML == "Sizes") && (document.getElementById('tsize').classList.contains('shown') != true)) {
-                    console.log('sized');
+                e.preventDefault();
+                if(e.toElement.nodeName == "DL" || e.toElement.nodeName == "DT") {
                     console.log(e);
-                    var tsize = document.getElementById('tsize');
-                    tsize.className += " shown";
-                    var drop = document.querySelectorAll('.divDropInner')[0];
-                    drop.style.opacity = 1;
-                    drop.style.display = "block";
-                    var panel = document.querySelectorAll('.divDropInner')[0];
-                    panel.style.position = "absolute";
-                    panel.style.top = " -85px";
-                    panel.style.left = "430px";
-                   
-                    
-                    
-                    
-                } else if ((e.target.id == "bansizes") && (document.getElementById('tsize').classList.contains('shown'))) {
-                    document.getElementById('tsize').
-                    className = "facet divDrop facet-size";
-                    var drop = document.querySelectorAll('.divDropInner')[0];
-                    drop.style.opacity = 0;
-                    drop.style.display = "none";
-                    var panel = document.querySelectorAll('.divDropInner')[0];
-                    panel.style.position = "absolute";
-                    panel.style.top = "0";
-                    panel.style.left = "0";
-                   
+                    if(document.getElementById('tsize').classList.contains('shown')) {
+                        document.getElementById('tsize').
+                        classList.remove('shown');
+                        var drop = document.querySelectorAll('.divDropInner')[0];
+                        drop.style.opacity = 0;
+                        drop.style.display = "none";
+                        var y = document.querySelectorAll('.divDropInner')[0];
+                        y.children[0].style.display = "none";
+                        y.children[1].style.display = "none";
+                        var ya = document.querySelectorAll('.divDropInner')[1];
+                        ya.children[0].style.display = "block";
+                        ya.children[1].style.display = "block";
+                        
+                        
+                    }//if
+                    else {
+                        var tsize = document.getElementById('tsize');
+                        tsize.className += " shown";
+                        var drop = document.querySelectorAll('.divDropInner')[0];
+                        drop.style.opacity = 1;
+                        drop.style.display = "block";
+                        var yf = document.querySelectorAll('.divDropInner')[0];
+                        yf.children[0].style.display = "block";
+                        yf.children[1].style.display = "block";
+                        var yc = document.querySelectorAll('.divDropInner')[1];
+                        yc.children[0].style.display = "none";
+                        yc.children[1].style.display = "none";
+                        var yd = document.getElementById('mCSB_6').style.lineHeight = "147px";
+                        yd.style.maxHeight = '147px';
+                        yd.style.height = '147px';
+                        var ye = document.getElementById('mCSB_1').style.lineHeight = "147px";
+                        ye.style.maxHeight = '147px';
+                        ye.style.height = '147px';
+                      
+                       
+                    }
+                           
+                }//if 
 
-                } else  {
 
-                    console.log('nothing');
-                }
+                
                 
 
 
