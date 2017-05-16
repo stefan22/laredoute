@@ -124,7 +124,8 @@
                 bsiz.addEventListener('click', function(e) {
                     e.preventDefault();
                     if (e.toElement.nodeName == "DL" || e.toElement.nodeName == "DT") {
-                        //og       
+                        //og moved
+                        rot.classList.remove('.reset-facet');         
                         rot.style.position = "absolute";
                         rot.style.right = "190px";
                         rot.style.top = "-119px";
@@ -132,7 +133,7 @@
                         //timezone   
                         function timezone() {
                             //og
-                            //rot.classList.remove('.reset-facet');     
+                            rot.classList.remove('.reset-facet');  
                             rot.className += " shown";
                             rot.style.zIndex = 10;
                             //size one
@@ -160,6 +161,7 @@
                         //ban one
                         document.getElementById('bansize').style.zIndex = 10;
                         //og
+                        rot.classList.remove('.reset-facet');  
                         rot.style.position = "";
                         rot.style.right = "";
                         rot.style.top = "";
@@ -169,7 +171,6 @@
                         //timezone   
                         function timezone() {
                             //og
-                            //rot.classList.remove('.reset-facet');  
                             bran.style.marginLeft = "7px";
                             rot.style.zIndex = 10;   
                             rot.className += " shown";
@@ -194,6 +195,32 @@
 
             otherSquares: function() {
                 console.info('%c otherSquares \u221a', 'background:blue;color:white;');
+                var rot = document.querySelectorAll('.facet.divDrop.facet-size')[0];
+                var otherSquares = document.querySelectorAll('.facet-group')[0];
+                var drop = document.querySelectorAll('.divDropInner')[0];
+                otherSquares.addEventListener('click', function(e) {
+                   
+                    console.log(e);
+                    var children = otherSquares.children;
+                    for(var i=0; i < children.length -1; i++) {
+                        if(e.target.innerText == "Sizes") {
+                            console.log('do nothing');
+                           
+                        } else {
+                            console.log('otherSquares');
+                            rot.classList.remove('shown');
+                            drop.style.opacity = 0;
+                            drop.style.display = "none";
+
+                        }
+                        
+                        
+
+
+                    }//for
+
+                }); //otherSquares
+                
                 
 
 
