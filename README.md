@@ -7,9 +7,9 @@
 ![](src/Control.png)
 
 
-<kbd>control</kbd>
+<kbd>V1</kbd>
 ![](src/V1.png)
 
 
-<kbd>control</kbd>
+<kbd>V2</kbd>
 ![](src/V2.png)
